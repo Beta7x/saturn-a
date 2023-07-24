@@ -1,0 +1,43 @@
+{
+  "name": "saturn",
+  "version": "1.0.0",
+  "description": "Microservices for Dipsit Apps",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && babel . --out-dir dist",
+    "build:docker":"docker build . -t diesade/saturn_a:1.0.0",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "lint": "eslint app/**/*.js",
+    "lint:fix": "eslint --fix app/**/*.js"
+  },
+  "author": "adepriyantowidies@gmail.com",
+  "license": "ISC",
+  "_moduleAliases": {
+    "@root": ".",
+    "@helpers": "./app/helpers/",
+    "@repositories": "./app/repositories/",
+    "@message": "./app/helpers/constants/messages",
+    "@http_status": "./app/helpers/constants/http_status"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.0.0",
+    "apicache": "^1.6.3",
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "module-alias": "^2.2.3",
+    "morgan": "^1.10.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "prisma": "^5.0.0"
+  }
+}
