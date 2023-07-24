@@ -1,0 +1,16 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: saturn
+    src: ./
+    engine: nodejs16
+    primary: true
+    commands:
+      - npm uninstall eslint eslint-config-standard
+      - npm uninstall eslint-plugin-import eslint-plugin-n
+      - npm uninstall eslint-plugin-promise
+      - npm cache clean --force
+      - npm cache verify
+      - rm .eslintrc.js
+    run: node index.js
+    dev: npm run dev
