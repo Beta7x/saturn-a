@@ -4,6 +4,13 @@ micros:
   - name: saturn
     src: ./
     engine: nodejs16
+    public_routes:
+      - "/api"
+      - "/api/*"
+    presets:
+      env:
+        - name: DATABASE_URL
+          description: Database instance
     primary: true
     commands:
       - npm uninstall eslint eslint-config-standard
