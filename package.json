@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist",
     "build": "npm run clean && babel . --out-dir dist",
-    "build:docker":"docker build . -t diesade/saturn_a:1.0.0",
+    "build:docker": "docker build . -t diesade/saturn_a:1.0.0",
     "start": "node index.js",
     "dev": "nodemon index.js",
     "lint": "eslint app/**/*.js",
