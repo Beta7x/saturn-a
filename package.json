@@ -9,7 +9,7 @@
     "build": "npm run clean && babel . --out-dir dist",
     "build:docker": "docker build . -t diesade/saturn_a:1.0.0",
     "start": "node index.js",
-    "dev": "nodemon index.js",
+    "dev": "node --watch --watch-preserve-output index.js",
     "lint": "eslint app/**/*.js",
     "lint:fix": "eslint --fix app/**/*.js"
   },
