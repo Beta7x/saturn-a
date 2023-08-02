@@ -5,11 +5,11 @@ const uuid = require('uuid').v4
 exports.register = async (req, res) => {
   try {
     const id = uuid()
-    const { first_name, last_name, email, password } = req.body
+    const { firstName, lastName, email, password } = req.body
     const user = await userRepo.createUser({
       id,
-      firstName: first_name,
-      lastName: last_name,
+      firstName,
+      lastName,
       email,
       password
     })
