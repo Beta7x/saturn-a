@@ -6,5 +6,6 @@ exports.ERROR = {
   REGISTER: 'User failed to create !.',
   USER_EXIST: 'User already exists !.',
   INTERNAL_SERVER: 'The server encountered an internal error or misconfiguration and was unable to complete your request',
-  MISSING_ARGS: 'Required arguments are missing !.'
+  MISSING_ARGS: 'Required arguments are missing !.',
+  INVALID_EMAIL_OR_PASS: 'Invalid email or password !.'
 }
