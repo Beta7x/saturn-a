@@ -3,6 +3,7 @@
 
 generator client {
   provider = "prisma-client-js"
+  // Use this when your production environment uses a red hat distribution.
   binaryTargets = ["native", "rhel-openssl-1.0.x"]
 }
 
