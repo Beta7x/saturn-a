@@ -14,7 +14,7 @@ const message = {
     console.log(`==========> ${code} <========== \n${message}`)
     const response = {
       code,
-      message,
+      message
     }
     return res.status(code).send(response)
   }
