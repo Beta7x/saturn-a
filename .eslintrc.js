@@ -23,7 +23,10 @@ module.exports = {
   },
   rules: {
   },
-  global: {
-    MSG: 'readOnly'
+  globals: {
+    MSG: 'readonly',
+    HTTP_STATUS: 'readonly',
+    ERROR: 'readonly',
+    SUCCESS: 'readonly'
   }
 }
