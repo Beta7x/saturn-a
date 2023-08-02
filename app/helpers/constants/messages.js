@@ -1,5 +1,6 @@
 exports.SUCCESS = {
-  REGISTER: 'User created successfully.'
+  REGISTER: 'User created successfully.',
+  LOGIN: 'Logged in successfully.'
 }
 
 exports.ERROR = {
