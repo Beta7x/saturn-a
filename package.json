@@ -4,7 +4,7 @@
   "description": "Microservices for Dipsit Apps",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "clean": "rm -rf dist",
     "build": "npm run clean && babel . --out-dir dist",
     "build:docker": "docker build . -t diesade/saturn_a:1.0.0",
@@ -28,6 +28,8 @@
     "bcrypt": "^5.1.0",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.1",
     "module-alias": "^2.2.3",
     "morgan": "^1.10.0",
     "uuid": "^9.0.0"
@@ -38,6 +40,21 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^16.0.1",
     "eslint-plugin-promise": "^6.1.1",
-    "prisma": "^5.0.0"
+    "jest": "^29.6.2",
+    "prisma": "^5.0.0",
+    "supertest": "^6.3.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "moduleNameMapper": {
+      "@root": ".",
+      "@helpers": "./app/helpers/",
+      "@repositories": "./app/repositories/",
+      "@message": "./app/helpers/constants/messages",
+      "@http_status": "./app/helpers/constants/http_status"
+    }
   }
 }
